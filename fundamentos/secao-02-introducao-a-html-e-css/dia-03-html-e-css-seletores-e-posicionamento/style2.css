@@ -1,6 +1,6 @@
 .super-mario {
     width: 200px;
-    position: absolute;
+    position: float;
   }
   
   .goomba {
@@ -13,7 +13,7 @@
   .baloon {
     position: absolute;
     top: 130px;
-    z-index: 1;
+    z-index: 2;
   }
   
   .speach {
@@ -21,9 +21,13 @@
     position: absolute;
     left: 230px;
     top: 170px;
-    z-index: 2;
+    z-index: 3;
   }
   
   .bowser {
     width: 200px;
+    position: absolute;
+    left: 485px;
+    top: 240px;
+    z-index: 1;
   }
