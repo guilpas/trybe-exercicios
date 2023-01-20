@@ -1,0 +1,65 @@
+ol {
+    background-color: lightgoldenrodyellow;
+}
+
+ol li:nth-child(2n){
+    color:darkgreen;
+}
+
+ol li:nth-child(2n+1){
+    text-transform: uppercase;
+}
+
+h1, h2, h3,h4{
+    color:darkred;
+}
+
+h1 em, h2 em, h3 em, h4  em{
+    font-size:40px;
+    border: 1px solid black;
+}
+
+li{
+    font-size: 20px;
+
+}
+
+li em{
+    font-weight: bold;
+}
+
+.linguagens li:nth-child(-n+3) {
+    color: darkblue;
+}
+
+.java{
+    background-color: lightpink;
+}
+
+.aliados a{
+    text-decoration: none;
+}
+
+.aliados a:hover{
+    font-weight: bold;
+}
+
+.trybe a:hover{
+    color: darkgreen;
+}
+
+.stackoverflow a:hover{
+    color: darkorange;
+}
+
+.w3schools a:hover{
+    color:forestgreen;
+}
+
+.mdn a:hover{
+    color: black;
+}
+
+.devdocs a:hover{
+    color: gold;
+}
