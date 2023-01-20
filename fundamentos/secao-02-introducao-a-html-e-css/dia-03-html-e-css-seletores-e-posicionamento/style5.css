@@ -1,0 +1,11 @@
+ol {
+    background-color: lightgoldenrodyellow;
+}
+
+ol li:nth-child(2n){
+    color:darkgreen;
+}
+
+ol li:nth-child(2n+1){
+    text-transform: uppercase;
+}
