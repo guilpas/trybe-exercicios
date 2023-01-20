@@ -35,3 +35,31 @@ li em{
 .java{
     background-color: lightpink;
 }
+
+.aliados a{
+    text-decoration: none;
+}
+
+.aliados a:hover{
+    font-weight: bold;
+}
+
+.trybe a:hover{
+    color: darkgreen;
+}
+
+.stackoverflow a:hover{
+    color: darkorange;
+}
+
+.w3schools a:hover{
+    color:forestgreen;
+}
+
+.mdn a:hover{
+    color: black;
+}
+
+.devdocs a:hover{
+    color: gold;
+}
