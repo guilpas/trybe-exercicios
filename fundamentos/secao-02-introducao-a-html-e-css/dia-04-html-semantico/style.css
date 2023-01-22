@@ -33,6 +33,14 @@ h1 {
     list-style: none;
   }
 
-  .podio{
+  .podium{
     text-align: center;
+  }
+
+  .prizes{
+    text-align: center;
+  }
+
+  .prizes li{
+    display: inline-block;
   }
