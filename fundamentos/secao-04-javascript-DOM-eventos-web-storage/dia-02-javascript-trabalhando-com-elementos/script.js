@@ -53,3 +53,32 @@ for(let index=0;index<3;index+=1){
     main.append(tagNova);
 }
 
+// Poderia usar as variaveis anteriores guardadas mas invés disso sera usado o getElements
+// Adicione a classe title na tag h1 criada;
+let h1criado = document.getElementsByTagName("h1")[0];
+h1criado.className = 'title';
+
+// Adicione a classe description nas 3 tags h3 criadas;
+let listaH3 = document.getElementsByTagName("h3");
+for (itemH3 of listaH3){
+    itemH3.className = 'description';
+}
+
+// Remova a section criada no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+let sectionDeletar = document.getElementsByClassName("left-content")[0];
+main.removeChild(sectionDeletar);
+
+// Centralize a section criada no passo 6 (aquele que possui a classe right-content).
+let sectionCentralizar = document.getElementsByClassName("right-content")[0];
+sectionCentralizar.style.margin = 'auto';
+
+// Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+let elementoPai = document.getElementsByClassName("center-content")[0];
+elementoPai.style.backgroundColor = 'green';
+
+// Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+let lista = document.getElementsByTagName("ul")[0];
+let ultimoElemento = lista.lastChild;
+ultimoElemento.remove();
+ultimoElemento = lista.lastChild;
+ultimoElemento.remove();
