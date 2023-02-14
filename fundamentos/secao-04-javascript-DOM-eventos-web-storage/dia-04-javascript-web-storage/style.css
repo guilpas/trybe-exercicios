@@ -1,0 +1,49 @@
+h1, h2, h3 {
+    text-align: center;
+}
+
+h3{
+    font-size: 16px;
+    font-style: italic;
+}
+
+.configs h3{
+    min-height: 40px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    margin-top: 80px;
+}
+
+.config{
+    border: 1px green solid;
+}
+
+.configs{
+    margin-bottom: 20px;
+    width: 18%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+button{
+    margin: auto;
+    padding: 10px 24px;
+    cursor: pointer;
+    background-color: #04AA6D;
+    color: white;
+    display: block;
+    width: 80%;
+}
+
+button.selected{
+    border: 3px darkgreen dashed;
+}
+
+button:hover {
+    background-color: #3e8e41;
+  }
