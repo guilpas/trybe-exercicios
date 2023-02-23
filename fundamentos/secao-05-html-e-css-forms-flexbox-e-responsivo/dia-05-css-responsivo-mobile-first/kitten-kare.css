@@ -95,3 +95,36 @@ body {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 650px){
+
+    aside {
+        display: none;
+    }
+
+    #navigation {
+        margin-top: 77px;
+    }
+
+    #navigation ul {
+        flex-direction: column;
+
+    }
+
+    #navigation li a {
+        border: 0;
+    }
+
+    #content {
+        width: 90%;
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    img {
+        max-width: 95%;
+    }
+}
