@@ -41,7 +41,22 @@ const customerInfo = (order) => {
 console.log(customerInfo(order));
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
+  order.name = 'Luiz Silva';
+  order.payment.total = 50;
+  let pedidos = Object.keys(order.order.pizza);
+  const bebidas = Object.values(order.order.drinks);
+
+  for (let i = 0; i < bebidas.length; i += 1) {
+    pedidos.push(bebidas[i].type);
+  }
+  pedidos = pedidos.join(', ');
+  pedidos = pedidos.replace(/,([^,]*)$/, ' e' + '$1');
+
+  return `Olá ${
+    order.name
+  }, o total do seu pedido de ${pedidos} é R$ ${order.payment.total.toFixed(
+    2
+  )}`;
 };
 
-orderModifier(order);
+console.log(orderModifier(order));
