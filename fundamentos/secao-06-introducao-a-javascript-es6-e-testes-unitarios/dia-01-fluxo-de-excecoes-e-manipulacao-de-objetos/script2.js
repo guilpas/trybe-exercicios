@@ -88,3 +88,32 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+// Bônus - Organizando lições
+// Utilizando o objeto (allLesson), crie uma função para contar quantos estudantes assistiram às aulas de Matemática;
+
+function countEstudantesAula(obj,aula) {
+  let estudantes = 0;
+  const lessons = Object.values(obj);
+    for (const lesson of lessons) {
+      if (lesson.materia === aula) estudantes+= lesson.numeroEstudantes;
+    }
+    return estudantes;
+}
+console.log(countEstudantesAula(allLessons,"Matemática"));
+
+// Utilizando o objeto (allLesson), crie uma função que deva retornar um objeto que represente o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes.
+
+function createReport(obj, professor) {
+  let estudantes = 0;
+  const aulas = [];
+  const lessons = Object.values(obj);
+    for (const lesson of lessons) {
+      if (lesson.professor === professor) {
+        estudantes+= lesson.numeroEstudantes;
+        aulas.push(lesson.materia);
+      }
+    }
+    return {professor,aulas,estudantes};
+}
+console.log(createReport(allLessons, 'Maria Clara'));
