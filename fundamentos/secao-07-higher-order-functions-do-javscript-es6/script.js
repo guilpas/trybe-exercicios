@@ -2,7 +2,7 @@
 
 const addPerson = (nomeCompleto) => ({
   nomeCompleto,
-  email: `${nomeCompleto.toLowerCase().replace(' ','_')}@trybe.com`,
+  email: `${nomeCompleto.toLowerCase().replace(' ', '_')}@trybe.com`,
 });
 
 console.log(addPerson('Guilherme Silva'));
@@ -24,10 +24,36 @@ console.log(newEmployees());
 
 const callbackIsSorteado = (apostado, sorteado) => apostado === sorteado;
 
-function sorteadorDeLoteria(apostado,callback){
-    const sorteado = Math.floor(Math.random()*5)+1;
-    return callback(apostado,sorteado) ? 'Parabéns, você ganhou' : 'Tente novamente';
+function sorteadorDeLoteria(apostado, callback) {
+  const sorteado = Math.floor(Math.random() * 5) + 1;
+  return callback(apostado, sorteado)
+    ? 'Parabéns, você ganhou'
+    : 'Tente novamente';
 }
 
-console.log(sorteadorDeLoteria(3,callbackIsSorteado));
+console.log(sorteadorDeLoteria(3, callbackIsSorteado));
 
+// Corretor automático de exame
+// Crie uma HOF que receberá três parâmetros:
+// O primeiro será um array de respostas corretas (soluções);
+// O segundo será um array contendo as respostas fornecidas por uma pessoa estudante;
+// O terceiro é uma função que compara os dois arrays e então dá uma pontuação baseada nos acertos. Para isso, essa função usará os seguintes critérios:
+// Uma resposta correta adiciona 1 ponto à pontuação final;
+// A ausência de uma resposta não altera a pontuação (quando for “N.A”);
+// Uma resposta incorreta reduz a pontuação final em 0.5 ponto.
+// Ao final, a HOF deve retornar o total de pontos obtidos através das respostas fornecidas pela pessoa estudante.
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const callbackCorretor = (gabarito, respostas) =>
+  respostas.reduce((pontuacao,resposta, index) => {
+    if (resposta === 'N.A') return pontuacao;
+    if (resposta === gabarito[index]) return pontuacao+1;
+    return pontuacao -0.5;
+  },0);
+
+function corretorAutomatico(gabarito, respostas, callback) {
+    return callback(gabarito,respostas);
+}
+
+console.log('Pontuação',corretorAutomatico(RIGHT_ANSWERS, STUDENT_ANSWERS,callbackCorretor));
