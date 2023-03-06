@@ -65,3 +65,39 @@ const countries = [
       area: 91
     }
   ];
+
+  // 1 - Calcule a quantidade total da população de todos os países.
+
+  let expectedResult = 120797034;
+const getPopulation = () => countries.reduce( (populacaoTotal,pais) => populacaoTotal + pais.population ,0);
+console.log(getPopulation(),"===",expectedResult);
+
+// 2 - Calcule a área total de todos os países.
+
+expectedResult = 4311757;
+const getTotalArea = () => countries.reduce( (areaTotal,pais) => areaTotal + pais.area ,0);
+console.log(getTotalArea(),"===",expectedResult);
+
+// 3 - Encontre o país com o maior nome.
+
+expectedResult = {
+    name: 'American Samoa',
+    region: 'Oceania',
+    currencies: [{ code: 'USD', name: 'United States Dollar' }],
+    capital: 'Pago Pago',
+    population: 55197,
+    area: 199
+  }
+  const longestName = () => countries.reduce( (maiorNome,pais) => maiorNome.name.length > pais.name.length? maiorNome : pais);
+  console.log(longestName(),"===",expectedResult);
+
+  // 4 - Retorne a quantidade de vezes que a letra a maiúscula ou minúscula aparece no array de nomes.
+
+  const names = [
+    'Aanemarie', 'Adervandes', 'Akifusa',
+    'Abegildo', 'Adicellia', 'Aladonata',
+    'Abeladerco', 'Adieidy', 'Alarucha',
+  ];
+  expectedResult = 20;
+  const countA = () => names.reduce( (counterA,name) => counterA + name.match(/[Aa]/g).length,0);
+  console.log(countA(),"===",expectedResult);
