@@ -18,3 +18,14 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 const toObject = ([nome,fabricante,ano]) => ({nome,fabricante,ano});
 console.log("Ex2",toObject(palio));
 console.log("Ex2",toObject(shelbyCobra));
+
+// Exercício 3
+// Escreva uma função greet que, dado o nome de uma pessoa, retorna uma mensagem de cumprimento. Um parâmetro adicional pode ser passado para alterar o cumprimento utilizado:
+
+// escreva greet abaixo
+const greet = (nome,cumprimento='Hi') => `${cumprimento} ${nome}`;
+
+// Retornos esperados:
+console.log("Ex3",greet('John')); // 'Hi John'
+console.log("Ex3",greet('John', 'Good morning')); // 'Good morning John'
+console.log("Ex3",greet('Isabela', 'Oi')); // 'Oi Isabela'
